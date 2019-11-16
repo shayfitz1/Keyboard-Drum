@@ -44,7 +44,8 @@ li{
     width: 80px;
     height: 80px;
     padding: 5px;
-    border-radius: 25%
+    border-radius: 25%;
+    cursor: pointer;
 }
 
 button{
@@ -111,7 +112,7 @@ li{
     }
     .owen-icon{
         position: absolute;
-        left: 15%;
+        left: 5%;
         top: 50%;
         height: 100px;
         width: 100px;
