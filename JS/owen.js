@@ -7,6 +7,7 @@
 // });
 
 const body = document.querySelector("body");
+const lis = document.querySelectorAll("li");
 
 body.addEventListener("keypress", function(e){
     //is there an audio element that has a matching data-key?
@@ -18,4 +19,14 @@ body.addEventListener("keypress", function(e){
     const li = document.querySelector(`li[id = "${e.which}"]`);
     li.classList.add("pressed");
     setTimeout(function(){li.classList.remove("pressed")}, 300);
+});
+
+lis.forEach(function(letter){
+    letter.addEventListener("click", function(e){
+        const audio = document.querySelector(`audio[id = "${e.target.id}"]`);
+        audio.currentTime = 0;
+        audio.play();
+        letter.classList.add("pressed");
+        setTimeout(function(){letter.classList.remove("pressed")}, 300);
+    });
 });
