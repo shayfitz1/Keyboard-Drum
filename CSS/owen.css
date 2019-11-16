@@ -45,6 +45,7 @@ li{
     height: 80px;
     padding: 5px;
     border-radius: 25%;
+    cursor: pointer;
 }
 
 .pressed{
@@ -106,7 +107,7 @@ li{
     }
     .drum-icon{
         position: absolute;
-        left: 15%;
+        left: 5%;
         top: 50%;
         height: 90px;
         width: 90px;
