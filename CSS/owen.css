@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+body{
+    background-image: url("../CSS/owen.jpg");
+    background-size: cover;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.drum-icon{
+    height: 90px;
+    width: 90px;
+}
+
+.drum-icon:hover{
+    opacity: 0.5;
+}
+
+
+ul{
+    list-style: none;
+    height: 25vh;
+    width: 65%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 15px;
+}
+
+li{
+    border: 3px solid white;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border-radius: 25%;
+}
+
+.pressed{
+    transform: scale(1.1);
+    border: 3px solid rgb(0, 183, 255);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 183, 255); 
+    box-shadow: 0px 0px 10px 4px rgba(0, 183, 255);
+    transition: .07s;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+
+span{
+    font-size: 12px;
+    padding: 0;
+}
+
+
+/* ======= FLEXBOX STARTS HERE ======= */
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    margin: 0
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======= MEDIA QUERIES STARTS HERE ======= */
+@media all and (max-width: 865px){
+    ul{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        width: 150px;
+    }
+    li{
+        font-size: 30px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    span{
+        font-size: 10px;
+    }
+    .container{
+        position: relative;
+    }
+    .drum-icon{
+        position: absolute;
+        left: 15%;
+        top: 50%;
+        height: 90px;
+        width: 90px;
+    }
+}
